@@ -1,0 +1,159 @@
+
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    grid-template:auto auto / 500px 300px;
+    background-color: rgb(67, 118, 108);
+    padding: 1px;
+    gap: 10px;
+}
+
+.one{
+    grid-row: span 2;
+    background-color: #FBF3D5;
+    /* border: 1px solid darkblue; */
+    padding: 10px;
+}
+
+.content{
+    display: grid;
+    grid-template:auto 1fr auto/1fr;
+    /* border: 2px solid darkblue; */
+}
+
+hr{
+    border: 1px solid gray;
+}
+
+.name>h1{
+    text-align: center;
+}
+
+.name>hr{
+    width: 200px;
+}
+
+.summary>p{
+    font-size: large;
+}
+
+.projects li{
+    list-style: none;
+    color: black;
+    font-family:cursive,monospace,'Courier New', Courier ;
+    font-weight: 900;
+}
+
+.projects{
+    border: 2px solid darkred;
+}
+
+.projects p{
+    font-size: large;
+}
+
+.two>img{
+    height: 300px;
+    width: 300px;
+}
+
+.three{
+    padding-left:10px;
+}
+
+.skills{
+    margin-top: 10px;
+}
+
+.personal-grid{
+    display: grid;
+    grid-template: 1fr 1fr 1fr;
+}
+
+li{
+    list-style:square;
+    font-family: cursive,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    border-radius: 2px;
+}
+
+.education{
+    display: flex;
+    /* border: 1px solid darkmagenta; */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.edu-blocks{
+    /* border: 1px solid brown; */
+    margin: 1px;
+}
+
+.education p,h4,h5,h1{
+    margin: 0;
+}
+
+.contact-grid{
+    display: grid;
+    grid-template: repeat(8,1fr)/1fr 3fr;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+.contact-grid h3,h5,img,p{
+    margin: 0px;
+}
+
+.contact-grid>h3{
+    grid-area: span 2/span 2;
+}
+
+.contact-grid>img{
+    grid-row: span 2;
+    height: 28px;
+    padding: 2px;
+    border: 1px solid rgb(159, 9, 9);
+    border-radius:5px;
+}
+
+.three{
+    background-color: #D6DAC8;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+@media (max-width:800px){
+    body{
+        font-size: 1rem;
+    }
+    li{
+        font-size: medium;
+    }
+    .container{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none;
+    }
+    .two>img{
+        visibility:none;
+        display: none;
+    }
+    .contact-grid{
+        order: 1;
+    }
+    .edu-blocks{
+        margin: 10px;
+    }
+    .contact-grid{
+        grid-template-columns: 1fr 9fr ;
+        gap: 2px;
+    }
+}
